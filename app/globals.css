@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-color: #fbfbfb;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  height: 13px;
+  width: 13px;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  height: 13px;
+  width: 13px;
+  background: center / cover no-repeat url("./assets/checkRadioIcon.svg");
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background-color: var(--background-color);
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+@layer components {
+  .header {
+    @apply text-white text-6xl font-extrabold leading-normal;
+  }
+
+  .navLink {
+    @apply text-secondFontColor font-normal text-base leading-[normal] cursor-pointer mob:text-sm mob:text-white mob:leading-4;
+  }
+
+  .activeNavLink {
+    @apply text-black font-semibold text-base leading-[normal] mob:text-sm mob:text-white mob:leading-4;
+  }
+
+  .mainHeader {
+    @apply text-black text-[40px] font-bold leading-[normal] text-center mob:text-2xl mob:leading-9;
+  }
+
+  .secondHeader {
+    @apply text-thirdFontColor text-lg font-medium leading-[normal] text-center mob:text-sm mob:leading-5;
+  }
+
+  .shadow {
+    box-shadow: 0px 0px 60px 30px rgba(0, 0, 0, 0.03);
+  }
+
+  .text-wrap-balance {
+    text-wrap: balance;
+  }
+
+  .buttonLarge {
+    @apply rounded-[10px] bg-black pt-[15px] pb-[15px] pl-12 pr-12 text-center font-medium text-base leading-[normal] text-white mob:pt-[10px] mob:pb-[10px] mob:pl-[30px] mob:pr-[30px] mob:rounded-[5px];
+  }
+
+  .buttonSmall {
+    @apply bg-black pt-[11px] pb-[11px] pl-[22px] pr-[22px] text-center font-medium text-xs leading-[normal] text-white;
+  }
+
+  .contactHeader {
+    @apply text-lg font-semibold leading-[26px] text-white;
+  }
+
+  .contactElement {
+    @apply font-normal text-base leading-[normal] text-white;
+  }
+
+  .secondInput::placeholder {
+    color: #616161;
+    opacity: 1;
+  }
+}
+
+font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 26px; /* 144.444% */
